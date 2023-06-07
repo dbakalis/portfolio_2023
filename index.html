@@ -13,8 +13,68 @@
     <body>
         <div class="container-fluid" data-layout="container">
 
+            <!-- navbar + mobile offcanvas menu -->
+            <div class="container fixed-top">
+
+                <!-- burger icon -->
+                <div class="col-1 d-block d-lg-none px-0 d-flex text-center">
+                    <span class="cursor-pointer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">test</span>
+                </div>
+
+                <!-- mobile offcanvas menu -->
+                <div class="offcanvas offcanvas-start" id="offcanvasMobileMenu" tabindex="-1">
+
+                    <!-- offcanvas header and close button -->
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="menuButton" aria-labelledby="menuButton"></button>
+                    </div>
+
+                    <!-- offcanvas body contntets -->
+                    <div class="offcanvas-body">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <a href="#hero" class="text-dark text-decoration-none">HOME</a>
+                            </div>
+                            
+                            <div class="col-12">
+                                <a href="#about" class="text-dark text-decoration-none">ABOUT</a>
+                            </div>
+                            
+                            <div class="col-12">
+                                <a href="#education" class="text-dark text-decoration-none">EDUCATION</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        
+                <!-- navbar -->
+                <nav class="navbar navbar-expand-lg d-none d-lg-block bg-nav py-4">
+                    <ul class="navbar-nav flex-wrap justify-content-end gap-4">
+
+                        <!-- hero -->
+                        <li class="nav-item">
+                            <a class="nav-link text-wrap text-white border-effect-orange" href="#hero">HOME</a>
+                        </li>
+                        
+                        <!-- about -->
+                        <li class="nav-item">
+                            <a class="nav-link text-wrap text-white border-effect-orange" href="#about">ABOUT</a>
+                        </li>
+                        
+                        <!-- education -->
+                        <li class="nav-item">
+                            <a class="nav-link text-wrap text-white border-effect-orange" href="#education">EDUCATION</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
             <!-- hero section -->
-            <div class="row">
+            <div class="row" id="hero">
                 <div class="col-12 h-100vh bg-hero-portrait d-flex justify-content-center align-items-center">
                     <div class="row">
                         <div class="col-12 mb-5">
@@ -29,10 +89,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-            more...
 
         </div>
 
