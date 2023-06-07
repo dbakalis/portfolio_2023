@@ -1,0 +1,10 @@
+/* font-sizes */
+h1{font-size: 4.5rem;}
+h2{font-size: 2.5rem;}
+
+/* heights */
+.h-100vh{height: 100vh;}
+.typed-height{height: 10px;}
+
+/* hero */
+.bg-hero-portrait{background-image: url(../../assets/img/hero_portrait.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}
