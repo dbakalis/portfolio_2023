@@ -31,3 +31,6 @@ h2{font-size: 2.5rem;}
 
 /* hero */
 .bg-hero-portrait{background-image: url(../../assets/img/hero_portrait.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}
+
+/* counters */
+.bg-counter-section{background-image: url(../../assets/img/bg-counters.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}
