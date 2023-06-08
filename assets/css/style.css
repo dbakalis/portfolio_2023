@@ -2,9 +2,17 @@
 h1{font-size: 4.5rem;}
 h2{font-size: 2.5rem;}
 
+@media screen and (max-width: 576px){
+    h1{font-size: 2.5rem;}
+    h2{font-size: 1.5rem;}
+}
+
 /* heights */
 .h-100vh{height: 100vh;}
 .typed-height{height: 10px;}
+
+/* positions */
+.top-25{top:25%}
 
 /* borders */
 .border-effect-orange{background: linear-gradient(#FF650B, #FF650B) bottom center / 0% 2px no-repeat; transition: 0.3s;}
