@@ -1,6 +1,7 @@
 /* font-sizes */
 h1{font-size: 4.5rem;}
 h2{font-size: 2.5rem;}
+.fs-18px{font-size: 18px;}
 
 @media screen and (max-width: 576px){
     h1{font-size: 2.5rem;}
@@ -9,6 +10,7 @@ h2{font-size: 2.5rem;}
 
 /* heights */
 .h-100vh{height: 100vh;}
+.h-25px{height: 25px;}
 .typed-height{height: 10px;}
 
 /* positions */
