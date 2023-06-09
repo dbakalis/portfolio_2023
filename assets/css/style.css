@@ -20,13 +20,15 @@ h2{font-size: 2.5rem;}
 /* borders */
 .border-bottom-orange{border-bottom:3px solid #FF650B;}
 .border-effect-orange{background: linear-gradient(#FF650B, #FF650B) bottom center / 0% 2px no-repeat; transition: 0.3s;}
-.border-effect-orange:hover{background-size: 100% 4px; border-color: transparent !important; opacity: 0.8;}
+.border-effect-orange:hover{background-size: 100% 4px; border-color: transparent !important; opacity: 0.8; transition-timing-function: ease-in;}
 
 /* navbar */
-.bg-nav{background-color: transparent;}
+#navbar_container{ transition-property: all; transition-duration: 1s;}
 .nav-link{font-size: 1.3rem; opacity: 1;}
 
 /* backgrounds */
+.bg-nav{background-color: transparent;}
+.bg-navbar-scroll{background-color: #000; transition: 1s;}
 .bg-orange{background-color: #FF650B;}
 .bg-hero-portrait{background-image: url(../../assets/img/hero_portrait.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}
 .bg-counter-section{background-image: url(../../assets/img/bg-counters.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}

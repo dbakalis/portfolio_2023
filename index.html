@@ -17,7 +17,7 @@
             <img src="assets/img/burger.webp" alt="burger menu icon" width="30" height="30" class="cursor-pointer d-block d-lg-none position-absolute right-0 mt-3 me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
 
             <!-- navbar + mobile offcanvas menu -->
-            <div class="container fixed-top">
+            <div class="container fixed-top" id="navbar_container">
 
                 <!-- mobile offcanvas menu -->
                 <div class="offcanvas offcanvas-start" id="offcanvasMobileMenu" tabindex="-1">
@@ -31,16 +31,29 @@
                     <!-- offcanvas body contntets -->
                     <div class="offcanvas-body">
                         <div class="row g-3">
+                            <!-- hero -->
                             <div class="col-12">
                                 <a href="#hero" class="text-dark text-decoration-none">HOME</a>
                             </div>
                             
+                            <!-- about -->
                             <div class="col-12">
                                 <a href="#about" class="text-dark text-decoration-none">ABOUT</a>
                             </div>
                             
+                            <!-- achievments -->
+                            <div class="col-12">
+                                <a href="#achievments" class="text-dark text-decoration-none">ACHIEVMENTS</a>
+                            </div>
+                            
+                            <!-- projects -->
                             <div class="col-12">
                                 <a href="#projects" class="text-dark text-decoration-none">PROJECTS</a>
+                            </div>
+                            
+                            <!-- contact -->
+                            <div class="col-12">
+                                <a href="#contact" class="text-dark text-decoration-none">CONTACT</a>
                             </div>
                         </div>
                     </div>
@@ -48,7 +61,7 @@
                 </div>
         
                 <!-- navbar -->
-                <nav class="navbar navbar-expand-lg d-none d-lg-block bg-nav py-4">
+                <nav class="navbar navbar-expand-lg d-none d-lg-block bg-nav py-4" id="desktop_navbar">
                     <ul class="navbar-nav flex-wrap justify-content-end gap-4">
 
                         <!-- hero -->
@@ -61,9 +74,19 @@
                             <a class="nav-link text-wrap text-white border-effect-orange" href="#about">ABOUT</a>
                         </li>
                         
-                        <!-- education -->
+                        <!-- achievments -->
+                        <li class="nav-item">
+                            <a class="nav-link text-wrap text-white border-effect-orange" href="#achievments">ACHIEVMENTS</a>
+                        </li>
+                        
+                        <!-- projects -->
                         <li class="nav-item">
                             <a class="nav-link text-wrap text-white border-effect-orange" href="#projects">PROJECTS</a>
+                        </li>
+                        
+                        <!-- contact -->
+                        <li class="nav-item">
+                            <a class="nav-link text-wrap text-white border-effect-orange" href="#contact">CONTACT</a>
                         </li>
 
                     </ul>
