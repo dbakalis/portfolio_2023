@@ -17,9 +17,6 @@ h2{font-size: 2.5rem;}
 .top-25{top:25%}
 .right-0{right: 0;}
 
-/* backgrounds */
-.bg-orange{background-color: #FF650B;}
-
 /* borders */
 .border-bottom-orange{border-bottom:3px solid #FF650B;}
 .border-effect-orange{background: linear-gradient(#FF650B, #FF650B) bottom center / 0% 2px no-repeat; transition: 0.3s;}
@@ -29,8 +26,8 @@ h2{font-size: 2.5rem;}
 .bg-nav{background-color: transparent;}
 .nav-link{font-size: 1.3rem; opacity: 1;}
 
-/* hero */
+/* backgrounds */
+.bg-orange{background-color: #FF650B;}
 .bg-hero-portrait{background-image: url(../../assets/img/hero_portrait.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}
-
-/* counters */
 .bg-counter-section{background-image: url(../../assets/img/bg-counters.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}
+.bg-contact-section{background-color: #000}
