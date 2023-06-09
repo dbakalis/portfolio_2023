@@ -2,15 +2,15 @@ $(document).ready(function(){
     
     function scrollNavFix(){
         if ($(window).scrollTop() <=  50) {
+            $("#navbar_container").removeClass('bg-navbar-scroll');
             $("#desktop_navbar").removeClass('py-1');
-            $("#desktop_navbar").removeClass('bg-navbar-scroll');
-            $("#navbar_container").addClass('container');
             $("#desktop_navbar").addClass('py-4');
+            $("#navbar_container").attr('style', '');
         }else{
             $("#desktop_navbar").removeClass('py-4');
-            $("#navbar_container").removeClass('container');
-            $("#desktop_navbar").addClass('bg-navbar-scroll');
             $("#desktop_navbar").addClass('py-1');
+            $("#navbar_container").addClass('bg-navbar-scroll');
+            $("#navbar_container").attr('style', 'max-width:100%; width:100%;');
         }
     }
 
