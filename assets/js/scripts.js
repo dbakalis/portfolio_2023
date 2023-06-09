@@ -1,5 +1,15 @@
 $(document).ready(function(){
     
+    function scrollNavFix(){
+        if ($(window).scrollTop() <=  50) {
+            $("#navbar_container").addClass('container');
+            $("#desktop_navbar").removeClass('bg-navbar-scroll');
+        }else{
+            $("#navbar_container").removeClass('container');
+            $("#desktop_navbar").addClass('bg-navbar-scroll');
+        }
+    }
+
     // init hero typed text
     new Typed('.text-typed-hero', {
         strings: $('.text-items-typed-hero').text().split('||'),
@@ -7,6 +17,12 @@ $(document).ready(function(){
         loop: true,
         backDelay: 1100,
         backSpeed: 50
+    });
+
+    // navbar scroll style fix
+    scrollNavFix();
+    $(window).scroll(function () { 
+        scrollNavFix();
     });
 
     // skills progress bars
@@ -37,5 +53,5 @@ $(document).ready(function(){
             }
         }, duration);
     });
-
 });
+
