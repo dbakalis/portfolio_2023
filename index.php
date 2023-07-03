@@ -258,9 +258,16 @@
                                             <div class="row g-3">
                                                 <!-- icon -->
                                                 <div class="col-12 text-center">
-                                                    <img src="assets/img/<?php echo $achievment['image']; ?>" alt="<?php echo $achievment['title']; ?>" class="img-fluid" width="100" height="100">
+                                                    <!-- achievment image (noscript for bots) -->
+                                                    <noscript>
+                                                        <img src="assets/img/<?php echo $achievment['image']; ?>" alt="<?php echo $achievment['title']; ?>" />
+                                                        <style>.achievment-image{ display: none; }</style>
+                                                    </noscript>
+
+                                                    <!-- achievment image (lazyload) -->
+                                                    <img src="assets/img/nophoto.webp" data-src="assets/img/<?php echo $achievment['image']; ?>" width="100" height="100" class="img-fluid lazyload achievment-image hover_image" alt="<?php echo $achievment['title']; ?>">
                                                 </div>
-                
+                                            
                                                 <!-- counter (countup.js) -->
                                                 <div class="col-12 text-center text-white">
                                                     <h3><?php echo $achievment['title']; ?></h3>
