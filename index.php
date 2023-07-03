@@ -2,7 +2,19 @@
     /* Set locale to English US */
     echo setlocale(LC_ALL,"US");
 
-    require_once('language/'.$site_language."/language.php");
+    // determine wich language to use
+    $site_language = ( ((isset($_SESSION['page_language'])) && ($_SESSION['page_language'] == 'en')) || (!isset($_SESSION['page_language'])) )? 'en' : 'gr';
+    require_once('language/en/language.php');
+    // require_once('language/'.$site_language."/language.php");
+
+    // set my projects array
+    $projects_arr = array(
+        array('tittle' => 'Project 1', 'details' => 'Details 1', 'image' => 'project_image.webp'),
+        array('tittle' => 'Project 2', 'details' => 'Details 2', 'image' => 'project_image.webp'),
+        array('tittle' => 'Project 3', 'details' => 'Details 3', 'image' => 'project_image.webp'),
+        array('tittle' => 'Project 4', 'details' => 'Details 4', 'image' => 'project_image.webp'),
+        array('tittle' => 'Project 5', 'details' => 'Details 5', 'image' => 'project_image.webp'),
+    );
 ?>
 
 <!DOCTYPE html>
@@ -308,26 +320,28 @@
                 <div class="row g-5">
 
                     <?php // loop projects
-                        for($i = 1; $i <= $lang['projects']['total_projects']; $i++){
+                        if (!empty($projects_arr)){
+                            foreach ($projects_arr as $project_index => $project) {
                     ?>
-                            <!-- project <?php echo $i; ?> -->
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <div class="card">
-                                    <!-- project image -->
-                                    <img src="assets/img/project_image.webp" class="card-img-top" alt="project_image">
+                                <!-- project <?php echo $i; ?> -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card">
+                                        <!-- project image -->
+                                        <img src="assets/img/<?php echo $project['image']; ?>" class="card-img-top" alt="project_image">
 
-                                    <!-- project details -->
-                                    <div class="card-body">
-                                        <h5 class="card-title">#<?php echo $i; ?>. - <?php echo $lang['projects']['title']; ?></h5>
-                                        <p class="card-text"><?php echo $lang['projects']['details']; ?></p>
-                                    </div>
+                                        <!-- project details -->
+                                        <div class="card-body">
+                                            <h5 class="card-title">#<?php echo $project_index; ?>. - <?php echo $project['title']; ?></h5>
+                                            <p class="card-text"><?php echo $project['details']; ?></p>
+                                        </div>
 
-                                    <div class="card-footer">
-                                        <a href="#" class="btn btn-primary"><?php echo $lang['projects']['visit']; ?></a>
+                                        <div class="card-footer">
+                                            <a href="#" class="btn btn-primary"><?php echo $lang['projects']['visit']; ?></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                     <?php
+                            }
                         }
                     ?>
 
