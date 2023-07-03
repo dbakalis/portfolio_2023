@@ -33,13 +33,9 @@
         ),
         'counters' => array(
             'completed_projects'     => 'Completed projects',
-            'completed_projects_num' => 44,
             'years_experience'       => 'Years of experience',
-            'years_experience_num'   => 6,
             'technologiess_used'     => 'Technologies utilized',
-            'technologiess_used_num' => 12,
             'customers'              => 'Customers',
-            'customers_num'          => 3,
         ),
         'projects' => array(
             'visit' => 'Visit',

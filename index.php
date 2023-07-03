@@ -22,6 +22,14 @@
         array('website' => 'Instagram', 'link' => 'https://www.instagram.com/dimibaka/', 'image' => 'instagram.webp'),
     );
 
+    // achievments array
+    $achievments_arr = array(
+        array('title' => $lang['counters']['completed_projects'], 'image' => 'websites.webp', 'counter' => 44),
+        array('title' => $lang['counters']['years_experience'], 'image' => 'calendar.webp', 'counter' => 6),
+        array('title' => $lang['counters']['technologiess_used'], 'image' => 'techs.webp', 'counter' => 12),
+        array('title' => $lang['counters']['customers'], 'image' => 'client.webp', 'counter' => 3),
+    );
+
     // set my projects array
     $projects_arr = array(
         array('title' => 'Project 1', 'details' => 'Details 1', 'image' => 'project_image.webp'),
@@ -242,71 +250,28 @@
                 <div class="col-12">
                     <div class="container py-5">
                         <div class="row g-3">
-
-                            <!-- completed projects -->
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="row g-3">
-                                    <!-- icon -->
-                                    <div class="col-12 text-center">
-                                        <img src="assets/img/websites.webp" alt="websites projects icon" class="img-fluid" width="100" height="100">
-                                    </div>
-    
-                                    <!-- counter (countup.js) -->
-                                    <div class="col-12 text-center text-white">
-                                        <h3><?php echo $lang['counters']['completed_projects']; ?></h3>
-                                        <span class="fs-2 count-up" data-val="<?php echo $lang['counters']['completed_projects_num']; ?>"><?php echo $lang['counters']['completed_projects_num']; ?></span>
-                                    </div>
-                                </div>                            
-                            </div>
-                            
-                            <!-- years of experience -->
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="row g-3">
-                                    <!-- icon -->
-                                    <div class="col-12 text-center">
-                                        <img src="assets/img/calendar.webp" alt="websites projects icon" class="img-fluid" width="100" height="100">
-                                    </div>
-    
-                                    <!-- counter (countup.js) -->
-                                    <div class="col-12 text-center text-white">
-                                        <h3><?php echo $lang['counters']['years_experience']; ?></h3>
-                                        <span class="fs-2 count-up" data-val="<?php echo $lang['counters']['years_experience_num']; ?>"><?php echo $lang['counters']['years_experience_num']; ?></span>
-                                    </div>
-                                </div>                            
-                            </div>
-                            
-                            <!-- technologies utilized -->
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="row g-3">
-                                    <!-- icon -->
-                                    <div class="col-12 text-center">
-                                        <img src="assets/img/techs.webp" alt="websites projects icon" class="img-fluid" width="105" height="105">
-                                    </div>
-    
-                                    <!-- counter (countup.js) -->
-                                    <div class="col-12 text-center text-white">
-                                        <h3><?php echo $lang['counters']['technologiess_used']; ?></h3>
-                                        <span class="fs-2 count-up" data-val="<?php echo $lang['counters']['technologiess_used_num']; ?>"><?php echo $lang['counters']['technologiess_used_num']; ?></span>
-                                    </div>
-                                </div>                            
-                            </div>
-  
-                            <!-- personal clients -->
-                            <div class="col-12 col-md-6 col-lg-3">
-                                <div class="row g-3">
-                                    <!-- icon -->
-                                    <div class="col-12 text-center">
-                                        <img src="assets/img/client.webp" alt="websites projects icon" class="img-fluid" width="85" height="85">
-                                    </div>
-    
-                                    <!-- counter (countup.js) -->
-                                    <div class="col-12 text-center text-white">
-                                        <h3><?php echo $lang['counters']['customers']; ?></h3>
-                                        <span class="fs-2 count-up" data-val="<?php echo $lang['counters']['customers_num']; ?>"><?php echo $lang['counters']['customers_num']; ?></span>
-                                    </div>
-                                </div>                            
-                            </div>
-                            
+                            <?php
+                                if(!empty($achievments_arr)){
+                                    foreach ($achievments_arr as $achievment_index => $achievment) {
+                            ?>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <div class="row g-3">
+                                                <!-- icon -->
+                                                <div class="col-12 text-center">
+                                                    <img src="assets/img/<?php echo $achievment['image']; ?>" alt="<?php echo $achievment['title']; ?>" class="img-fluid" width="100" height="100">
+                                                </div>
+                
+                                                <!-- counter (countup.js) -->
+                                                <div class="col-12 text-center text-white">
+                                                    <h3><?php echo $achievment['title']; ?></h3>
+                                                    <span class="fs-2 count-up" data-val="<?php echo $achievment['counter']; ?>"><?php echo $achievment['counter']; ?></span>
+                                                </div>
+                                            </div>                            
+                                        </div>
+                            <?php
+                                    }
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
