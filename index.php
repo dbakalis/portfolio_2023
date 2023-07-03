@@ -231,7 +231,7 @@
             </div>
 
             <!-- counters section -->
-            <div class="row bg-counter-section py-5 mb-5">
+            <div class="row bg-counter-section py-5 mb-5" id="achievments">
                 <div class="col-12">
                     <div class="container py-5">
                         <div class="row g-3">
