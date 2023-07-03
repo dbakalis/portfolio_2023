@@ -4,8 +4,7 @@
 
     // determine wich language to use
     $site_language = ( ((isset($_SESSION['page_language'])) && ($_SESSION['page_language'] == 'en')) || (!isset($_SESSION['page_language'])) )? 'en' : 'gr';
-    require_once('language/en/language.php');
-    // require_once('language/'.$site_language."/language.php");
+    require_once('language/'.$site_language."/language.php");
 
     // set my projects array
     $projects_arr = array(
