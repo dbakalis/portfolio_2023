@@ -1,18 +1,34 @@
 <?php
     /* Set locale to English US */
-    echo setlocale(LC_ALL,"US");
+    setlocale(LC_ALL,"US");
 
     // determine wich language to use
     $site_language = ( ((isset($_SESSION['page_language'])) && ($_SESSION['page_language'] == 'en')) || (!isset($_SESSION['page_language'])) )? 'en' : 'gr';
     require_once('language/'.$site_language."/language.php");
 
+    // set skills array
+    $skills_arr = array(
+        array('title' => 'PHP', 'percentage' => '90', 'alias' => 'php'),
+        array('title' => 'HTML', 'percentage' => '90', 'alias' => 'html'),
+        array('title' => 'CSS / BOOTSTRAP', 'percentage' => '80', 'alias' => 'css'),
+        array('title' => 'Javascript / Jquery', 'percentage' => '80', 'alias' => 'js'),
+        array('title' => 'Laravel', 'percentage' => '50', 'alias' => 'laravel'),
+    );
+
+    // socials array
+    $socials_arr = array(
+        array('website' => 'Linked in', 'link' => 'https://www.linkedin.com/in/dimitris-bakalis-587a011a0/', 'image' => 'linkedin.webp'),
+        array('website' => 'Github', 'link' => 'https://github.com/dbakalis', 'image' => 'github.webp'),
+        array('website' => 'Instagram', 'link' => 'https://www.instagram.com/dimibaka/', 'image' => 'instagram.webp'),
+    );
+
     // set my projects array
     $projects_arr = array(
-        array('tittle' => 'Project 1', 'details' => 'Details 1', 'image' => 'project_image.webp'),
-        array('tittle' => 'Project 2', 'details' => 'Details 2', 'image' => 'project_image.webp'),
-        array('tittle' => 'Project 3', 'details' => 'Details 3', 'image' => 'project_image.webp'),
-        array('tittle' => 'Project 4', 'details' => 'Details 4', 'image' => 'project_image.webp'),
-        array('tittle' => 'Project 5', 'details' => 'Details 5', 'image' => 'project_image.webp'),
+        array('title' => 'Project 1', 'details' => 'Details 1', 'image' => 'project_image.webp'),
+        array('title' => 'Project 2', 'details' => 'Details 2', 'image' => 'project_image.webp'),
+        array('title' => 'Project 3', 'details' => 'Details 3', 'image' => 'project_image.webp'),
+        array('title' => 'Project 4', 'details' => 'Details 4', 'image' => 'project_image.webp'),
+        array('title' => 'Project 5', 'details' => 'Details 5', 'image' => 'project_image.webp'),
     );
 ?>
 
@@ -167,61 +183,36 @@
 
                                     <!-- social -->
                                     <div class="col-12 d-flex justify-content-center flex-nowrap gap-4">
-                                        <!-- linked in -->
-                                        <a href="https://www.linkedin.com/in/dimitris-bakalis-587a011a0/">
-                                            <img width="35" height="35" class="img-fluid" src="assets/img/linkedin.webp" alt="linked in">
-                                        </a>
-
-                                        <!-- github -->
-                                        <a href="https://github.com/dbakalis">
-                                            <img width="35" height="35" class="img-fluid" src="assets/img/github.webp" alt="github">
-                                        </a>
-
-                                        <!-- instagram -->
-                                        <a href="https://www.instagram.com/dimibaka/">
-                                            <img width="35" height="35" class="img-fluid" src="assets/img/instagram.webp" alt="instagram">
-                                        </a>
+                                        <?php
+                                            if(!empty($socials_arr)){
+                                                foreach ($socials_arr as $social_index => $social) {
+                                        ?>
+                                                    <a href="<?php echo $social['link']; ?>">
+                                                        <img width="35" height="35" class="img-fluid hover_image" src="assets/img/<?php echo $social['image']; ?>" alt="<?php echo $social['website']; ?>">
+                                                    </a>
+                                        <?php
+                                                }
+                                            }
+                                        ?>
                                     </div>
                                     
                                     <!-- skills -->
                                     <div class="col-12">
                                         <div class="row g-3">
-
-                                            <div class="col-12">
-                                                <span>PHP</span> 
-                                                <div class="progress progress-bar-php-header h-25px" role="progressbar" aria-label="Skill php" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                                    <div class="progress-bar progress-bar-php bg-orange text-dark fs-18px"></div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-12">
-                                                <span>HTML / BOOTSTRAP</span> 
-                                                <div class="progress progress-bar-html-header h-25px" role="progressbar" aria-label="Skill html" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                                    <div class="progress-bar progress-bar-html bg-orange text-dark fs-18px"></div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-12">
-                                                <span>CSS</span> 
-                                                <div class="progress progress-bar-css-header h-25px" role="progressbar" aria-label="Skill css" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                                    <div class="progress-bar progress-bar-css bg-orange text-dark fs-18px"></div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-12">
-                                                <span>Javascript / Jquery</span> 
-                                                <div class="progress progress-bar-js-header h-25px" role="progressbar" aria-label="Skill js" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                                    <div class="progress-bar progress-bar-js bg-orange text-dark fs-18px"></div>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-12">
-                                                <span>Laravel</span> 
-                                                <div class="progress progress-bar-laravel-header h-25px" role="progressbar" aria-label="Skill laravel" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                                    <div class="progress-bar progress-bar-laravel bg-orange text-dark fs-18px"></div>
-                                                </div>
-                                            </div>
-
+                                            <?php
+                                                if(!empty($skills_arr)){
+                                                    foreach ($skills_arr as $skill_index => $skill) {
+                                            ?>
+                                                        <div class="col-12">
+                                                            <span><?php echo $skill['title']; ?></span> 
+                                                            <div class="progress progress-bar-<?php echo $skill['alias']; ?>-header h-25px" role="progressbar" aria-label="Skill <?php echo $skill['title']; ?>" aria-valuenow="0" aria-valuemin="0" aria-valuemax="<?php echo $skill['percentage']; ?>">
+                                                                <div class="progress-bar progress-bar-<?php echo $skill['alias']; ?> bg-orange progress-bar-striped text-dark fs-18px fw-500"></div>
+                                                            </div>
+                                                        </div>
+                                            <?php
+                                                    }
+                                                }
+                                            ?>
                                         </div>
                                     </div>
 

@@ -4,7 +4,7 @@
             'title' => 'Bakalis Dimitrios - Portfolio'
         ),
         'navbar' => array(
-            'home'          => 'ΗΟΜΕΠΑΓΕ',
+            'home'          => 'HOMEPAGE',
             'about'         => 'ABOUT ME',
             'achievments'   => 'ACHIEVEMENTS',
             'projects'      => 'PROJECTS',
