@@ -42,10 +42,7 @@
             'customers_num'          => 3,
         ),
         'projects' => array(
-            'total_projects' => 4,
-            'title'          => 'Projects',
-            'details'        => 'Project details text',
-            'visit'          => 'Visit',
+            'visit' => 'Visit',
         ),
         'contact' => array(
             'title' => 'Contact form',
