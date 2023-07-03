@@ -187,8 +187,15 @@
                                             if(!empty($socials_arr)){
                                                 foreach ($socials_arr as $social_index => $social) {
                                         ?>
-                                                    <a href="<?php echo $social['link']; ?>">
-                                                        <img width="35" height="35" class="img-fluid hover_image" src="assets/img/<?php echo $social['image']; ?>" alt="<?php echo $social['website']; ?>">
+                                                    <a href="<?php echo $social['link']; ?>" target="_blank">
+                                                        <!-- social image (noscript for bots) -->
+                                                        <noscript>
+                                                            <img src="assets/img/<?php echo $social['image']; ?>" alt="<?php echo $social['website']; ?>" />
+                                                            <style>.social-image{ display: none; }</style>
+                                                        </noscript>
+
+                                                        <!-- social image (lazyload) -->
+                                                        <img src="assets/img/nophoto.webp" data-src="assets/img/<?php echo $social['image']; ?>" width="35" height="35" class="img-fluid lazyload social-image hover_image" alt="<?php echo $project['website']; ?>">
                                                     </a>
                                         <?php
                                                 }
@@ -308,16 +315,21 @@
             <!-- projects section -->
             <div class="container mb-5" id="projects">
                 <div class="row g-5">
-
-                    <?php // loop projects
+                    <?php
                         if (!empty($projects_arr)){
                             foreach ($projects_arr as $project_index => $project) {
                     ?>
                                 <!-- project <?php echo $i; ?> -->
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="card">
-                                        <!-- project image -->
-                                        <img src="assets/img/<?php echo $project['image']; ?>" class="card-img-top" alt="project_image">
+                                        <!-- project image (noscript for bots) -->
+                                        <noscript>
+                                            <img src="assets/img/<?php echo $project['image']; ?>" alt="assets/img/<?php echo $project['image']; ?>" />
+                                            <style>.project-image{ display: none; }</style>
+                                        </noscript>
+
+                                        <!-- project image (lazyload) -->
+                                        <img src="assets/img/nophoto.webp" data-src="assets/img/<?php echo $project['image']; ?>" width="330" height="326" class="img-fluid lazyload project-image w-auto h-auto" alt="<?php echo $project['title']; ?>">
 
                                         <!-- project details -->
                                         <div class="card-body">
@@ -377,6 +389,7 @@
         <!-- scripts -->
 		<script src="assets/js/bootstrap_5.2.bundle.min.js" defer></script>
         <script src="assets/js/jquery3_6_0.min.js"></script>
+		<script src="assets/js/lazysizes.min.js"></script>
 		<script src="assets/js/typed/typed.min.js" defer></script>
 		<script src="assets/js/scripts.js" defer></script>
     </body>
