@@ -233,7 +233,7 @@
                                                         <div class="col-12">
                                                             <span><?php echo $skill['title']; ?></span> 
                                                             <div class="progress progress-bar-<?php echo $skill['alias']; ?>-header h-25px" role="progressbar" aria-label="Skill <?php echo $skill['title']; ?>" aria-valuenow="0" aria-valuemin="0" aria-valuemax="<?php echo $skill['percentage']; ?>">
-                                                                <div class="progress-bar progress-bar-<?php echo $skill['alias']; ?> bg-orange progress-bar-striped text-dark fs-18px fw-500"></div>
+                                                                <div class="progress-bar progress-bar-<?php echo $skill['alias']; ?> bg-orange progress-bar-striped text-dark fs-18px fw-500 rounded"></div>
                                                             </div>
                                                         </div>
                                             <?php

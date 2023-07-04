@@ -30,7 +30,7 @@
             'address'       => 'Address',
             'address_value' => 'Evosmos, Thessaloniki',
             'about_title'   => 'About me',
-            'about_text'    => 'Text about me',
+            'about_text'    => "Experienced IT Manager with a demonstrated history of working in the retail industry. Skilled in Full stack web development (HTML, CSS/Bootstrap, Javascripy/Jquery, PHP/ASP, SQL Databases). Strong information technology professional with a Bachelor's degree focused in Information Technology from Technological Educational Institute of Central Macedonia."
         ),
         'counters' => array(
             'completed_projects'     => 'Completed projects',
