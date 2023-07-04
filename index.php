@@ -265,13 +265,13 @@
                                                     </noscript>
 
                                                     <!-- achievment image (lazyload) -->
-                                                    <img src="assets/img/nophoto.webp" data-src="assets/img/<?php echo $achievment['image']; ?>" width="100" height="100" class="img-fluid lazyload achievment-image hover_image" alt="<?php echo $achievment['title']; ?>">
+                                                    <img src="assets/img/nophoto.webp" data-src="assets/img/<?php echo $achievment['image']; ?>" width="100" height="100" class="lazyload achievment-image" alt="<?php echo $achievment['title']; ?>">
                                                 </div>
                                             
                                                 <!-- counter (countup.js) -->
                                                 <div class="col-12 text-center text-white">
                                                     <h3><?php echo $achievment['title']; ?></h3>
-                                                    <span class="fs-2 count-up" data-val="<?php echo $achievment['counter']; ?>"><?php echo $achievment['counter']; ?></span>
+                                                    <span class="fs-2 count-up" data-val="<?php echo $achievment['counter']; ?>">0</span>
                                                 </div>
                                             </div>                            
                                         </div>
