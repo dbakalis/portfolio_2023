@@ -56,6 +56,10 @@
 		<meta name="keywords" content="dimitris, bakalis, portfolio, web developer, developer, php, html, js, javascript, jquery, laravel, linked in, github, instagram, greece, evosmos" />
 		<link href="https://dbakalis.devon.gr" rel="canonical">
 
+        <!-- favicons -->
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.webp" />
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.webp" />
+
         <!-- css -->
 		<link href="assets/css/bootstrap_5.2.min.css" type="text/css" rel="stylesheet">
 		<link href="assets/css/style.css" type="text/css" rel="stylesheet">
