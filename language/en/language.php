@@ -1,7 +1,8 @@
 <?php
     $lang = array(
         'meta' => array(
-            'title' => 'Bakalis Dimitrios - Portfolio'
+            'title'         => 'Bakalis Dimitrios - Portfolio',
+            'description'   => 'My name is Dimitrios Bakalis and I am a web developer. This page is a sample page of my portfolio in wich I post my work.',
         ),
         'navbar' => array(
             'home'          => 'HOMEPAGE',
