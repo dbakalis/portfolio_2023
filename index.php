@@ -54,7 +54,7 @@
 		<!-- meta tags -->
 		<meta name="description" content="<?php echo $lang['meta']['description']; ?>" />
 		<meta name="keywords" content="dimitris, bakalis, portfolio, web developer, developer, php, html, js, javascript, jquery, laravel, linked in, github, instagram, greece, evosmos" />
-		<link href="dbakalis.devon.gr" rel="canonical">
+		<link href="https://dbakalis.devon.gr" rel="canonical">
 
         <!-- css -->
 		<link href="assets/css/bootstrap_5.2.min.css" type="text/css" rel="stylesheet">
