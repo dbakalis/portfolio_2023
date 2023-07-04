@@ -104,11 +104,6 @@
                             <div class="col-12">
                                 <a href="#projects" class="text-dark text-decoration-none"><?php echo $lang['navbar']['projects']; ?></a>
                             </div>
-                            
-                            <!-- contact -->
-                            <div class="col-12">
-                                <a href="#contact" class="text-dark text-decoration-none"><?php echo $lang['navbar']['contact']; ?></a>
-                            </div>
                         </div>
                     </div>
 
@@ -137,12 +132,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-wrap text-white border-effect-orange" href="#projects"><?php echo $lang['navbar']['projects']; ?></a>
                         </li>
-                        
-                        <!-- contact -->
-                        <li class="nav-item">
-                            <a class="nav-link text-wrap text-white border-effect-orange" href="#contact"><?php echo $lang['navbar']['contact']; ?></a>
-                        </li>
-
                     </ul>
                 </nav>
 
@@ -329,44 +318,16 @@
                             }
                         }
                     ?>
-
                 </div>
             </div>
 
-            <!-- contact section -->
-            <form action="" method="post">
-                <div class="row bg-contact-section py-5">
-                    <div class="col-12">
-                        <div class="container">
-                            <div class="row g-4">
-
-                                <!-- header -->
-                                <h3 class="text-center text-white"><?php echo $lang['contact']['title']; ?></h3>
-
-                                <!-- email -->
-                                <div class="col-12 col-md-6">
-                                    <label for="contact-email" class="form-label text-white"><?php echo $lang['contact']['email']; ?></label>
-                                    <input type="email" class="form-control" id="contact-email">
-                                </div>
-
-                                <!-- name -->
-                                <div class="col-12 col-md-6">
-                                    <label for="contact-name" class="form-label text-white"><?php echo $lang['contact']['name']; ?></label>
-                                    <input type="text" class="form-control" id="contact-name">
-                                </div>
-
-                                <!-- text -->
-                                <div class="col-12">
-                                    <label for="contact-text" class="form-label text-white"><?php echo $lang['contact']['text']; ?></label>
-                                    <textarea id="contact-text" cols="30" rows="10" class="form-control"></textarea>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+            <!-- copyright section -->
+            <div class="row">
+                <div class="col-12 bg-copyright text-white text-center">
+                    © 2023 <?php echo $lang['copyright']['message']; ?>
                 </div>
-            </form>
-
+            </div>
+            
         </div>
 
         <!-- scripts -->

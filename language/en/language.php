@@ -11,7 +11,6 @@
             'projects'      => 'PROJECTS',
             'jobs'          => 'JOB HISTORY',
             'education'     => 'EDUCATION',
-            'contact'       => 'CONTACT',
             'menu'          => 'MENU',
         ),
         'hero' => array(
@@ -41,11 +40,8 @@
         'projects' => array(
             'visit' => 'Visit',
         ),
-        'contact' => array(
-            'title' => 'Contact form',
-            'email' => 'E-mail',
-            'name'  => 'Fullname',
-            'text'  => 'Message',
+        'copyright' => array(
+            'message' => 'Developed by Bakalis Dimitrios'
         )
     );
 ?>
