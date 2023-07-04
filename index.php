@@ -43,10 +43,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- viewport and charset -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- title -->
         <title><?php echo $lang['meta']['title']; ?></title>
+
+		<!-- meta tags -->
+		<meta name="description" content="<?php echo $lang['meta']['description']; ?>" />
+		<meta name="keywords" content="dimitris, bakalis, portfolio, web developer, developer, php, html, js, javascript, jquery, laravel, linked in, github, instagram, greece, evosmos" />
+		<link href="dbakalis.devon.gr" rel="canonical">
 
         <!-- css -->
 		<link href="assets/css/bootstrap_5.2.min.css" type="text/css" rel="stylesheet">
@@ -56,7 +64,7 @@
         <div class="container-fluid" data-layout="container">
 
             <!-- navbar burger icon -->
-            <img src="assets/img/burger.webp" alt="burger menu icon" width="30" height="30" class="cursor-pointer d-block d-lg-none position-absolute right-0 mt-3 me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
+            <img src="assets/img/burger.webp" alt="burger menu icon" width="42" height="30" class="cursor-pointer d-block d-lg-none position-absolute right-0 mt-3 me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
 
             <!-- navbar + mobile offcanvas menu -->
             <div class="container fixed-top" id="navbar_container">
@@ -203,7 +211,7 @@
                                                         </noscript>
 
                                                         <!-- social image (lazyload) -->
-                                                        <img src="assets/img/nophoto.webp" data-src="assets/img/<?php echo $social['image']; ?>" width="35" height="35" class="img-fluid lazyload social-image hover_image" alt="<?php echo $project['website']; ?>">
+                                                        <img src="assets/img/nophoto.webp" data-src="assets/img/<?php echo $social['image']; ?>" width="35" height="35" class="img-fluid lazyload social-image hover_image" alt="<?php echo $social['website']; ?>" aria-label="<?php echo $social['website']; ?>">
                                                     </a>
                                         <?php
                                                 }
@@ -265,13 +273,13 @@
                                                     </noscript>
 
                                                     <!-- achievment image (lazyload) -->
-                                                    <img src="assets/img/nophoto.webp" data-src="assets/img/<?php echo $achievment['image']; ?>" width="100" height="100" class="img-fluid lazyload achievment-image hover_image" alt="<?php echo $achievment['title']; ?>">
+                                                    <img src="assets/img/nophoto.webp" data-src="assets/img/<?php echo $achievment['image']; ?>" width="100" height="100" class="lazyload achievment-image" alt="<?php echo $achievment['title']; ?>">
                                                 </div>
                                             
                                                 <!-- counter (countup.js) -->
                                                 <div class="col-12 text-center text-white">
                                                     <h3><?php echo $achievment['title']; ?></h3>
-                                                    <span class="fs-2 count-up" data-val="<?php echo $achievment['counter']; ?>"><?php echo $achievment['counter']; ?></span>
+                                                    <span class="fs-2 count-up" data-val="<?php echo $achievment['counter']; ?>">0</span>
                                                 </div>
                                             </div>                            
                                         </div>
@@ -291,7 +299,6 @@
                         if (!empty($projects_arr)){
                             foreach ($projects_arr as $project_index => $project) {
                     ?>
-                                <!-- project <?php echo $i; ?> -->
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="card">
                                         <!-- project image (noscript for bots) -->
@@ -305,7 +312,7 @@
 
                                         <!-- project details -->
                                         <div class="card-body">
-                                            <h5 class="card-title">#<?php echo $project_index; ?>. - <?php echo $project['title']; ?></h5>
+                                            <strong class="card-title">#<?php echo $project_index; ?> - <?php echo $project['title']; ?></strong>
                                             <p class="card-text"><?php echo $project['details']; ?></p>
                                         </div>
 
