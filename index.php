@@ -237,8 +237,19 @@
 
                             <!-- about paragraph -->
                             <div class="col-12 col-md-7">
-                                <h3 class="border-bottom-orange"><?php echo $lang['about']['about_title']; ?></h3>
-                                <?php echo $lang['about']['about_text']; ?>
+                                <div class="row">
+
+                                    <div class="col-12 mb-5">
+                                        <h3 class="border-bottom-orange"><?php echo $lang['about']['about_title']; ?></h3>
+                                        <?php echo $lang['about']['about_text']; ?>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <h3 class="border-bottom-orange"><?php echo $lang['about']['work_history_title']; ?></h3>
+                                        
+                                    </div>
+                                    
+                                </div>
                             </div>
 
                         </div>
