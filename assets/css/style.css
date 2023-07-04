@@ -34,6 +34,7 @@ h2{font-size: 2.5rem;}
 .bg-hero-portrait{background-image: url(../../assets/img/hero_portrait.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}
 .bg-counter-section{background-image: url(../../assets/img/bg-counters.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}
 .bg-contact-section{background-color: #000}
+.bg-copyright{background-color: #000}
 
 /* socials */
 .hover_image{transition: .3s;}
